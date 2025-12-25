@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Honeybunchsugarplum 🍷</title>
+    <!-- Elegant & Handwritten Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@300;500;700&family=Dancing+Script&display=swap" rel="stylesheet">
     
     <style>
@@ -73,7 +74,7 @@
 
         h1 { font-family: 'Playfair Display', serif; color: var(--maroon); font-size: 2.2rem; margin: 10px 0; }
         p { font-size: 1.1rem; line-height: 1.6; color: #444; }
-        .main-gif { width: 160px; border-radius: 15px; margin-bottom: 15px; }
+        .main-gif { width: 200px; border-radius: 15px; margin-bottom: 15px; }
 
         /* Buttons */
         .btn-wrap { display: flex; gap: 15px; margin-top: 25px; }
@@ -82,12 +83,12 @@
         .btn-no { background-color: #ddd; color: #666; }
         .btn-nav { background-color: transparent; border: 2px solid var(--maroon); color: var(--maroon); }
 
-        /* FLOWER RAIN - FIXED */
+        /* FLOWER RAIN */
         .flower {
             position: fixed;
-            top: -50px; /* Start above the screen */
+            top: -60px; /* Start well above screen */
             pointer-events: none;
-            z-index: 1; /* Behind the content, above background */
+            z-index: 1;
             animation: fall linear forwards;
         }
 
@@ -110,7 +111,7 @@
 
     <div class="container">
         
-        <!-- START PAGE -->
+        <!-- PAGE 0: START -->
         <div id="page-0" class="page active">
             <div class="center-content" style="width: 100%;">
                 <img src="https://media.tenor.com/7S_m995S_78AAAAi/mochi-peach-cat-cute-cat.gif" class="main-gif">
@@ -123,13 +124,13 @@
             </div>
         </div>
 
-        <!-- SAD CAT PAGE -->
+        <!-- SAD PAGE (YOUR NEW GIF) -->
         <div id="sad-page" class="page">
             <div class="center-content" style="width: 100%;">
-                <img src="https://media.tenor.com/07_v0JInA9EAAAAi/milk-and-mocha-bear-crying.gif" class="main-gif">
-                <h1>Wait... :(</h1>
-                <p>I worked really hard on this for you... don't leave me sad!</p>
-                <button class="btn-yes" onclick="hideSad()">Okay, fine!</button>
+                <img src="https://media1.tenor.com/m/htPuU9NJypsAAAAC/oh-no-noo.gif" class="main-gif">
+                <h1>Oh Nooo!</h1>
+                <p>Don't leave me sad, honeybunchsugarplum! I worked really hard on this...</p>
+                <button class="btn-yes" onclick="hideSad()">Okay, fine, show me!</button>
             </div>
         </div>
 
@@ -137,8 +138,8 @@
         <div id="page-1" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Sweet ❤️</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Us ✨</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Together ❤️</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Our Spark</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/978m-07Bv_IAAAAi/heart-love.gif" class="main-gif">
@@ -161,7 +162,7 @@
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>My Peace</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Joy</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Home</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/N2_m9S39Vn8AAAAi/milk-and-mocha-hug.gif" class="main-gif">
@@ -173,8 +174,8 @@
                     </div>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Everything</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>True Love</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Love You</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Everything</span></div>
                 </div>
             </div>
         </div>
@@ -183,8 +184,8 @@
         <div id="page-3" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>First Date</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Laughter</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Best Day</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>The Laughs</span></div>
                 </div>
                 <div class="center-content">
                     <h1>Our Memories</h1>
@@ -196,7 +197,7 @@
                 </div>
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Our Story</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Favorite</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Us Always</span></div>
                 </div>
             </div>
         </div>
@@ -206,7 +207,7 @@
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>The Tune</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Rhythm</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Quiet Nights</span></div>
                 </div>
                 <div class="center-content">
                     <h1>A Song For You</h1>
@@ -219,7 +220,7 @@
                 </div>
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Melody</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Soulmate</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Heartbeat</span></div>
                 </div>
             </div>
         </div>
@@ -228,20 +229,20 @@
         <div id="page-5" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>🌷🌷🌷</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Tulips</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Tulips 🌷</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Favorite</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/9C0D394-0v8AAAAi/flowers-tulips.gif" class="main-gif">
-                    <h1>For You</h1>
+                    <h1>For My Honeybunchsugarplum</h1>
                     <p>I saw your repost and remembered that <b>Tulips</b> are your favorite flower.</p>
-                    <p style="font-style: italic; color: var(--maroon);">"I wanted to give you these because you make my life bloom."</p>
-                    <h1 style="font-size: 3rem;">I Love You! ❤️</h1>
-                    <button class="btn-nav" onclick="nextPage(0)">Start Over</button>
+                    <p style="font-style: italic; color: var(--maroon);">"I wanted to give you these because you make my life bloom every day."</p>
+                    <h1 style="font-size: 2.5rem;">I Love You! ❤️</h1>
+                    <button class="btn-nav" onclick="nextPage(0)">Return to Start</button>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>🌻🌻🌻</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Always</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Sunflowers 🌻</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Bloom</span></div>
                 </div>
             </div>
         </div>
@@ -275,20 +276,14 @@
             const flower = document.createElement('div');
             flower.className = 'flower';
             flower.innerHTML = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
-            
-            // Random horizontal position
             flower.style.left = Math.random() * 100 + 'vw';
-            
-            // Random size and speed
             flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
-            flower.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Slightly slower for romantic effect
-            
+            flower.style.animationDuration = (Math.random() * 3 + 5) + 's';
             document.body.appendChild(flower);
-            
-            setTimeout(() => flower.remove(), 7000);
+            setTimeout(() => flower.remove(), 8000);
         }
 
-        // Keep a light rain going
+        // Light continuous rain
         setInterval(() => {
             const activePage = document.querySelector('.page.active');
             if(activePage && activePage.id !== 'page-0' && activePage.id !== 'sad-page') {

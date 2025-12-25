@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Favorite Person 🍷</title>
+    <title>For My Honeybunchsugarplum 🍷</title>
     <!-- Elegant Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --maroon: #630330; /* Deep Maroon */
+            --maroon: #630330; 
             --maroon-light: #8a1a4a;
             --cream: #fffaf0;
             --gold: #d4af37;
@@ -19,7 +19,7 @@
         body {
             margin: 0;
             font-family: 'Quicksand', sans-serif;
-            background-color: var(--maroon); /* Background is maroon */
+            background-color: var(--maroon);
             background-image: radial-gradient(circle, #800000 10%, #4a0000 90%);
             color: var(--text);
             display: flex;
@@ -29,7 +29,6 @@
             overflow-x: hidden;
         }
 
-        /* Container */
         .container {
             width: 95%;
             max-width: 1000px;
@@ -53,7 +52,7 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        /* Scrapbook Side-Photo Layout */
+        /* Scrapbook Layout */
         .scrapbook-layout {
             display: flex;
             align-items: center;
@@ -86,38 +85,21 @@
             transition: 0.3s;
         }
 
-        .scrapbook-photo:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
+        .scrapbook-photo:hover { transform: scale(1.05) rotate(2deg); }
 
-        /* Typography */
         h1 {
             font-family: 'Playfair Display', serif;
             color: var(--maroon);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin: 15px 0;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #444;
-        }
+        p { font-size: 1.1rem; line-height: 1.6; color: #444; }
 
-        /* GIFs */
-        .main-gif {
-            width: 200px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
+        .main-gif { width: 180px; border-radius: 15px; margin-bottom: 15px; }
 
         /* Buttons */
-        .btn-wrap {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
+        .btn-wrap { display: flex; gap: 15px; margin-top: 25px; }
         button {
             padding: 12px 28px;
             border: none;
@@ -127,15 +109,9 @@
             cursor: pointer;
             transition: 0.3s;
         }
-
         .btn-yes { background-color: var(--maroon); color: white; border: 1px solid var(--gold); }
         .btn-no { background-color: #ddd; color: #666; }
         .btn-nav { background-color: transparent; border: 2px solid var(--maroon); color: var(--maroon); }
-
-        button:hover {
-            transform: translateY(-3px);
-            opacity: 0.9;
-        }
 
         /* Mobile View */
         @media (max-width: 800px) {
@@ -145,17 +121,8 @@
             .scrapbook-photo { width: 70px; height: 70px; }
         }
 
-        /* Floating Hearts */
-        .heart {
-            position: fixed;
-            color: var(--gold);
-            pointer-events: none;
-            z-index: 99;
-            animation: fall linear forwards;
-        }
-        @keyframes fall {
-            to { transform: translateY(110vh) rotate(360deg); }
-        }
+        .heart { position: fixed; color: var(--gold); pointer-events: none; z-index: 99; animation: fall linear forwards; }
+        @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -166,7 +133,7 @@
         <div id="page-0" class="page active">
             <div class="center-content" style="width: 100%;">
                 <img src="https://media.tenor.com/7S_m995S_78AAAAi/mochi-peach-cat-cute-cat.gif" class="main-gif">
-                <h1>Hi Beautiful...</h1>
+                <h1>Hi honeybunchsugarplum...</h1>
                 <p>I have a special message for you. Do you want to see it?</p>
                 <div class="btn-wrap">
                     <button class="btn-yes" onclick="nextPage(1)">Yes, please!</button>
@@ -179,8 +146,8 @@
         <div id="sad-page" class="page">
             <div class="center-content" style="width: 100%;">
                 <img src="https://media.tenor.com/07_v0JInA9EAAAAi/milk-and-mocha-bear-crying.gif" class="main-gif">
-                <h1>Please?</h1>
-                <p>I worked really hard on this... don't leave me sad!</p>
+                <h1>Wait... :(</h1>
+                <p>I worked really hard on this for you... don't leave me sad!</p>
                 <button class="btn-yes" onclick="hideSad()">Okay, fine!</button>
             </div>
         </div>
@@ -195,7 +162,7 @@
                 <div class="center-content">
                     <img src="https://media.tenor.com/978m-07Bv_IAAAAi/heart-love.gif" class="main-gif">
                     <h1>How I Like You</h1>
-                    <p>I like the way you see the world, and I especially like the way I see myself when I'm with you.</p>
+                    <p>I like everything about you—from the way you talk to the way you make me feel like the luckiest person in the world.</p>
                     <div class="btn-wrap">
                         <button class="btn-nav" onclick="nextPage(0)">← Return</button>
                         <button class="btn-nav" onclick="nextPage(2)">Continue →</button>
@@ -218,7 +185,7 @@
                 <div class="center-content">
                     <img src="https://media.tenor.com/N2_m9S39Vn8AAAAi/milk-and-mocha-hug.gif" class="main-gif">
                     <h1>How I Love You</h1>
-                    <p>I love you because you're the first person I want to tell good news to, and the only person I want to hold when things are hard.</p>
+                    <p>I love you deeply. You're my peace, my home, and my favorite person to exist with.</p>
                     <div class="btn-wrap">
                         <button class="btn-nav" onclick="nextPage(1)">← Return</button>
                         <button class="btn-nav" onclick="nextPage(3)">Memories →</button>
@@ -240,7 +207,7 @@
                 </div>
                 <div class="center-content">
                     <h1>Our Memories</h1>
-                    <p>Every photo here is a reminder of a moment I never want to forget. Thank you for making life so beautiful.</p>
+                    <p>Every memory we've made is a treasure. I can't wait to make a thousand more with you.</p>
                     <div class="btn-wrap">
                         <button class="btn-nav" onclick="nextPage(2)">← Return</button>
                         <button class="btn-nav" onclick="nextPage(4)">Our Song →</button>
@@ -262,7 +229,7 @@
                 </div>
                 <div class="center-content">
                     <h1>A Song For You</h1>
-                    <p>This melody reminds me of our late-night talks and the way you make me feel.</p>
+                    <p>Whenever I hear this, I think of you and smile. It’s "our" song in my heart.</p>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2tY879X5N7suPsn6Esh0vI?utm_source=generator" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     <div class="btn-wrap">
                         <button class="btn-nav" onclick="nextPage(3)">← Return</button>
@@ -285,10 +252,10 @@
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/9C0D394-0v8AAAAi/flowers-tulips.gif" class="main-gif">
-                    <h1>For My Tulip</h1>
+                    <h1>For You</h1>
                     <p>I saw your repost and remembered that <b>Tulips</b> are your favorite flower.</p>
-                    <p style="font-style: italic; color: var(--maroon);">"I wanted to give you these because you make my life bloom every single day."</p>
-                    <h1 style="font-size: 3rem;">I Love You ❤️</h1>
+                    <p style="font-style: italic; color: var(--maroon);">"I wanted to give you these because you make my life bloom."</p>
+                    <h1 style="font-size: 3rem;">I Love You! ❤️</h1>
                     <button class="btn-nav" onclick="nextPage(0)">Start Over</button>
                 </div>
                 <div class="photo-sidebar">
@@ -307,20 +274,17 @@
             document.getElementById('page-' + num).classList.add('active');
             if(num > 0) createHearts();
         }
-
         function showSad() {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('sad-page').classList.add('active');
         }
-
         function hideSad() { nextPage(0); }
-
         function createHearts() {
             for(let i=0; i<15; i++) {
                 setTimeout(() => {
                     const h = document.createElement('div');
                     h.className = 'heart';
-                    h.innerHTML = '🍷'; // Maroon themed "heart" or use ❤️
+                    h.innerHTML = '🍷'; 
                     h.style.left = Math.random() * 100 + 'vw';
                     h.style.top = '-5vh';
                     h.style.fontSize = (Math.random() * 20 + 15) + 'px';

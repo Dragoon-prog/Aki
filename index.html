@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Honeybunchsugarplum 🍷</title>
-    <!-- Elegant & Handwritten Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@300;500;700&family=Dancing+Script&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --maroon: #630330; 
-            --maroon-light: #8a1a4a;
             --cream: #fffaf0;
             --gold: #d4af37;
             --text: #2d2d2d;
@@ -29,6 +27,7 @@
             overflow-x: hidden;
         }
 
+        /* Container */
         .container {
             width: 95%;
             max-width: 1100px;
@@ -41,17 +40,9 @@
             border: 3px solid var(--gold);
         }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.8s ease;
-        }
-
+        .page { display: none; animation: fadeIn 0.8s ease; }
         .active { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
 
         /* Polaroid Styling */
         .polaroid {
@@ -62,38 +53,12 @@
             width: 100%;
             max-width: 160px;
         }
-
-        .polaroid img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            display: block;
-        }
-
-        .polaroid span {
-            font-family: 'Dancing Script', cursive;
-            font-size: 0.9rem;
-            color: #555;
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-        }
+        .polaroid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+        .polaroid span { font-family: 'Dancing Script', cursive; font-size: 0.9rem; color: #555; display: block; margin-top: 10px; text-align: center; }
 
         /* Layout */
-        .scrapbook-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .photo-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 20%;
-        }
-
+        .scrapbook-layout { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+        .photo-sidebar { display: flex; flex-direction: column; gap: 20px; width: 20%; }
         .tilt-left { transform: rotate(-3deg); }
         .tilt-right { transform: rotate(3deg); }
         .polaroid:hover { transform: scale(1.1) rotate(0deg); z-index: 20; }
@@ -106,53 +71,38 @@
             align-items: center;
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--maroon);
-            font-size: 2.2rem;
-            margin: 10px 0;
-        }
-
+        h1 { font-family: 'Playfair Display', serif; color: var(--maroon); font-size: 2.2rem; margin: 10px 0; }
         p { font-size: 1.1rem; line-height: 1.6; color: #444; }
-
         .main-gif { width: 160px; border-radius: 15px; margin-bottom: 15px; }
 
         /* Buttons */
         .btn-wrap { display: flex; gap: 15px; margin-top: 25px; }
-        button {
-            padding: 12px 28px;
-            border: none;
-            border-radius: 5px;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+        button { padding: 12px 28px; border: none; border-radius: 5px; font-weight: 700; cursor: pointer; transition: 0.3s; font-family: 'Quicksand'; }
         .btn-yes { background-color: var(--maroon); color: white; border: 1px solid var(--gold); }
         .btn-no { background-color: #ddd; color: #666; }
         .btn-nav { background-color: transparent; border: 2px solid var(--maroon); color: var(--maroon); }
 
-        /* Responsive Mobile View */
+        /* FLOWER RAIN - FIXED */
+        .flower {
+            position: fixed;
+            top: -50px; /* Start above the screen */
+            pointer-events: none;
+            z-index: 1; /* Behind the content, above background */
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
         @media (max-width: 850px) {
             .scrapbook-layout { flex-direction: column; }
             .photo-sidebar { flex-direction: row; width: 100%; justify-content: center; }
             .center-content { width: 100%; order: -1; }
             .polaroid { max-width: 100px; padding: 5px 5px 15px 5px; }
-        }
-
-        /* Flower Rain Styling */
-        .flower {
-            position: fixed;
-            pointer-events: none;
-            z-index: 1;
-            animation: fall linear forwards;
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
@@ -165,7 +115,7 @@
             <div class="center-content" style="width: 100%;">
                 <img src="https://media.tenor.com/7S_m995S_78AAAAi/mochi-peach-cat-cute-cat.gif" class="main-gif">
                 <h1>Hi honeybunchsugarplum...</h1>
-                <p>I made something special for you. Ready to go through it?</p>
+                <p>I have a special message for you. Do you want to see it?</p>
                 <div class="btn-wrap">
                     <button class="btn-yes" onclick="nextPage(1)">Yes, please!</button>
                     <button class="btn-no" onclick="showSad()">No</button>
@@ -176,10 +126,10 @@
         <!-- SAD CAT PAGE -->
         <div id="sad-page" class="page">
             <div class="center-content" style="width: 100%;">
-                <img src="https://media1.tenor.com/m/htPuU9NJypsAAAAC/oh-no-noo.gif">
-                <h1>Oh no... :(</h1>
-                <p>Don't leave me hanging, honeybunchsugarplum! I worked really hard on this...</p>
-                <button class="btn-yes" onclick="hideSad()">Okay, I'll see it!</button>
+                <img src="https://media.tenor.com/07_v0JInA9EAAAAi/milk-and-mocha-bear-crying.gif" class="main-gif">
+                <h1>Wait... :(</h1>
+                <p>I worked really hard on this for you... don't leave me sad!</p>
+                <button class="btn-yes" onclick="hideSad()">Okay, fine!</button>
             </div>
         </div>
 
@@ -187,8 +137,8 @@
         <div id="page-1" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>First Sight</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Your Smile</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Sweet ❤️</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Us ✨</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/978m-07Bv_IAAAAi/heart-love.gif" class="main-gif">
@@ -200,8 +150,8 @@
                     </div>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Favorite</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Together</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Beautiful</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Forever</span></div>
                 </div>
             </div>
         </div>
@@ -210,8 +160,8 @@
         <div id="page-2" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Holding On</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Always You</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>My Peace</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Joy</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/N2_m9S39Vn8AAAAi/milk-and-mocha-hug.gif" class="main-gif">
@@ -223,8 +173,8 @@
                     </div>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Pure Love</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>My World</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>My Everything</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>True Love</span></div>
                 </div>
             </div>
         </div>
@@ -233,7 +183,7 @@
         <div id="page-3" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>The Best Day</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>First Date</span></div>
                     <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Laughter</span></div>
                 </div>
                 <div class="center-content">
@@ -245,8 +195,8 @@
                     </div>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Our Journey</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Forever Us</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Our Story</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Favorite</span></div>
                 </div>
             </div>
         </div>
@@ -255,8 +205,8 @@
         <div id="page-4" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Dancing</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Quiet Nights</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>The Tune</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Rhythm</span></div>
                 </div>
                 <div class="center-content">
                     <h1>A Song For You</h1>
@@ -268,7 +218,7 @@
                     </div>
                 </div>
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>In My Head</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Melody</span></div>
                     <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Soulmate</span></div>
                 </div>
             </div>
@@ -279,7 +229,7 @@
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>🌷🌷🌷</span></div>
-                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>For You</span></div>
+                    <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Tulips</span></div>
                 </div>
                 <div class="center-content">
                     <img src="https://media.tenor.com/9C0D394-0v8AAAAi/flowers-tulips.gif" class="main-gif">
@@ -291,7 +241,7 @@
                 </div>
                 <div class="photo-sidebar">
                     <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>🌻🌻🌻</span></div>
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Blooming</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Always</span></div>
                 </div>
             </div>
         </div>
@@ -316,7 +266,6 @@
         function hideSad() { nextPage(0); }
 
         function startFlowerRain() {
-            // Create a burst of flowers when switching pages
             for(let i=0; i<15; i++) {
                 setTimeout(createFlower, i * 200);
             }
@@ -325,26 +274,27 @@
         function createFlower() {
             const flower = document.createElement('div');
             flower.className = 'flower';
-            // Randomly choose Tulip or Sunflower
             flower.innerHTML = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
             
+            // Random horizontal position
             flower.style.left = Math.random() * 100 + 'vw';
+            
+            // Random size and speed
             flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
-            flower.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            flower.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Slightly slower for romantic effect
             
             document.body.appendChild(flower);
             
-            // Remove from DOM after animation finishes
-            setTimeout(() => flower.remove(), 5000);
+            setTimeout(() => flower.remove(), 7000);
         }
 
-        // Keep a light rain going in the background
+        // Keep a light rain going
         setInterval(() => {
             const activePage = document.querySelector('.page.active');
             if(activePage && activePage.id !== 'page-0' && activePage.id !== 'sad-page') {
                 createFlower();
             }
-        }, 1000);
+        }, 1200);
     </script>
 </body>
 </html>

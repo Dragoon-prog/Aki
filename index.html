@@ -83,10 +83,10 @@
         .btn-no { background-color: #ddd; color: #666; }
         .btn-nav { background-color: transparent; border: 2px solid var(--maroon); color: var(--maroon); }
 
-        /* FLOWER RAIN */
+        /* FLOWER RAIN - FIXED */
         .flower {
             position: fixed;
-            top: -60px; /* Start well above screen */
+            top: -100px; /* High starting point */
             pointer-events: none;
             z-index: 1;
             animation: fall linear forwards;
@@ -96,7 +96,7 @@
             0% { transform: translateY(0) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }
             90% { opacity: 1; }
-            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+            100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
         }
 
         @media (max-width: 850px) {
@@ -114,7 +114,8 @@
         <!-- PAGE 0: START -->
         <div id="page-0" class="page active">
             <div class="center-content" style="width: 100%;">
-                <img src="https://media.tenor.com/7S_m995S_78AAAAi/mochi-peach-cat-cute-cat.gif" class="main-gif">
+                <!-- HAPPY CAT GIF -->
+                <img src="https://media.tenor.com/dutdoOw7PjsAAAAi/happy-cat.gif" class="main-gif">
                 <h1>Hi honeybunchsugarplum...</h1>
                 <p>I have a special message for you. Do you want to see it?</p>
                 <div class="btn-wrap">
@@ -124,15 +125,14 @@
             </div>
         </div>
 
-        <!-- SAD PAGE (YOUR NEW GIF) -->
+        <!-- SAD PAGE (OH NO GIF) -->
         <div id="sad-page" class="page">
-          <div class="center-content" style="width: 100%;">
-        <!-- Use this specific direct link -->
-             <img src="https://media1.tenor.com/m/htPuU9NJypsAAAAC/oh-no-noo.gif" class="main-gif" alt="Sad Gif">
-             <h1>Oh Nooo!</h1>
-             <p>Don't leave me sad, honeybunchsugarplum! I worked really hard on this...</p>
-             <button class="btn-yes" onclick="hideSad()">Okay, fine, show me!</button>
-           </div>
+            <div class="center-content" style="width: 100%;">
+                <img src="https://media1.tenor.com/m/htPuU9NJypsAAAAC/oh-no-noo.gif" class="main-gif">
+                <h1>Oh Nooo!</h1>
+                <p>Don't leave me sad, honeybunchsugarplum! I worked really hard on this...</p>
+                <button class="btn-yes" onclick="hideSad()">Okay, fine, show me!</button>
+            </div>
         </div>
 
         <!-- PAGE 1: HOW I LIKE HER -->
@@ -230,7 +230,7 @@
         <div id="page-5" class="page">
             <div class="scrapbook-layout">
                 <div class="photo-sidebar">
-                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>Tulips 🌷</span></div>
+                    <div class="polaroid tilt-left"><img src="https://via.placeholder.com/150"><span>🌷🌷🌷</span></div>
                     <div class="polaroid tilt-right"><img src="https://via.placeholder.com/150"><span>Favorite</span></div>
                 </div>
                 <div class="center-content">
@@ -284,7 +284,7 @@
             setTimeout(() => flower.remove(), 8000);
         }
 
-        // Light continuous rain
+        // Continuous light rain
         setInterval(() => {
             const activePage = document.querySelector('.page.active');
             if(activePage && activePage.id !== 'page-0' && activePage.id !== 'sad-page') {
